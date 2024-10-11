@@ -1,18 +1,42 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Formulario Bonitp</title>
+    <title>Cumpleaños</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 </head>
+
 <body>
+    <h1>CUMPLEAÑOS</h1>
     <form>
         <label for="name">Nombre</label>
-        <input id="name" type="text">
-        <label >Contraseña:</label>
-        <input type="password" required>
-        <input type="submit" value="Enviar consulta">
+        <input id="name" type="text" required><br>
+        <label for="Apellido">Apellidos</label>
+        <input id="apellido" type="text" required><br>
+        <label for="email">Email</label>
+        <input id="email" type="email" required><br>
+        <label for="email">Fecha Nacimeinto</label>
+        <input id="fecha" type="date" required><br>
+        <label for="postre">Postre</label><br>
+        <select name="postre" id="postre" required>
+            <option>Natillas</option>
+            <option>Helado de vainilla</option>
+            <option>Platano</option>
+            <option>Tarta de queso</option>
+        </select><br>
+        <label for="date">Fecha Fiesta</label><br>
+        <input type="checkbox" id="1" name="fecha1" value="fecha1">
+        <label for="fecha1">12/10/2024</label><br>
+        <input type="checkbox" id="2" name="fecha2" value="fecha2">
+        <label for="fecha1">13/10/2024</label><br>
+        <input type="checkbox" id="3" name="fecha3" value="fecha3">
+        <label for="fecha1">14/10/2024</label><br><br>
+        <label for="Felicitación">Felicitación Cumpleaños</label><br>
+        <input id="Felicitación" type="text" required><br>
+        <input type="submit" value="Enviar Felicitación">
     </form>
 </body>
+
 </html>

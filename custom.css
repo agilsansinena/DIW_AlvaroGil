@@ -1,0 +1,43 @@
+body{
+    background-color: black;
+    color: black;
+}
+
+th {
+    background-color: blue;
+}
+.titulo{
+    color: white;
+    background-color: black;
+
+}
+#Emilio{
+    background-color: green;
+}
+#Yolanda{
+    background-color: blueviolet;
+}
+#Ana{
+    background-color: cornflowerblue
+}
+#Cliente{
+    background-color: coral;
+}
+#Empresa{
+    background-color: darkkhaki;
+}
+tr th{
+    text-decoration: underline;
+}
+tr td {
+    text-decoration: overline;
+}
+td{
+    color: yellow;
+    background-color: brown;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    font-style: italic;
+    font-weight: 100;
+    text-align: center;
+}
