@@ -1,0 +1,40 @@
+*{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: 900;
+}
+body{
+    margin: 0;
+}
+header{
+    background-color: aquamarine;
+    height: 10vh;
+}
+nav{
+    background-color: darkseagreen;
+    height: 10vh;
+}
+section{
+    background-color: antiquewhite;
+    height: 80vh;
+    width: 80%;
+    float: left;
+}
+
+article{
+    background-color: darkorchid;
+    height: 40vh;
+}
+article + article {
+    background-color: green;
+}
+aside{
+    background-color: coral;
+    height: 60vh;
+    width: 20%;
+    float: left;
+}
+footer{
+    background-color: crimson;
+    height: 20vh;
+}
