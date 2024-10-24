@@ -1,0 +1,11 @@
+.fila{
+    display: flex;
+}
+img{
+    padding: 6px;
+}
+.comic{
+    background-color: red;
+    display: inline-block;
+    padding: 5px;
+}

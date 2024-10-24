@@ -1,5 +1,4 @@
 *{
-    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 20px;
     font-weight: 900;
 }
@@ -16,14 +15,17 @@ nav{
 }
 section{
     background-color: antiquewhite;
-    height: 80vh;
+    height: 60vh;
     width: 80%;
     float: left;
 }
 
 article{
     background-color: darkorchid;
-    height: 40vh;
+    height: 20vh;
+    width: 50%;
+    float: left;
+    
 }
 article + article {
     background-color: green;
@@ -37,4 +39,20 @@ aside{
 footer{
     background-color: crimson;
     height: 20vh;
+    clear: both;
+}
+@media screen and (max-width: 1000px){/*Cuando es una tablet*/
+    article{
+        width: 100%;
+    }
+    
+}
+@media screen and (max-width: 600px){
+aside {
+    height: 10vh;
+    width: 100%;
+}
+section{
+    width: 100%;
+}
 }
