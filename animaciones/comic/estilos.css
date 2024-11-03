@@ -1,0 +1,81 @@
+.fila1,.fila2{
+    display: flex;
+}
+
+.comic{
+    background-color: red;
+    display: inline-block;
+    padding: 5px;
+}
+/*1*/
+img{
+    padding: 6px;
+    width: 300px;
+}
+.fila1 .columna1 img:hover{
+    width: 400px;
+    transition: width 5s;
+}
+/*2*/
+.fila1 .columna2 img{ opacity: 1;}
+.fila1 .columna2 img:hover{
+    opacity: 0;
+    transition: opacity 3s;
+}
+/*3*/
+.fila1 .columna3{position: relative;}
+.fila1 .columna3 img{
+    position: absolute;
+    left: 0;
+    transition: left ease-in 3s;
+}
+.fila1 .columna3 img:hover{
+    left: 600px;
+}
+/*4*/
+.fila2 .columna1 img { 
+    opacity: 1;
+    padding: 0;
+    width: 300px;
+    transition: all 4s;
+}
+.fila2 .columna1 img:hover { 
+    padding: 100px;
+    width: 100px;
+    opacity: 0.5;
+}
+/*La 5 movimiento de arriba a abajo. HAY QUE HACERLO*/
+
+.fila2 .columna2 img{
+    -webkit-transition: 2s linear;
+    transition: 2s linear;
+}
+.fila2 .columna2 img:hover{
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+}
+/*una curva hacia abajo*/
+.fila2 {
+    position :relative;
+    width: 940px;
+    height: 500px;
+}
+.fila2 .columna3{
+    position: absolute;
+    top: 0;
+    left: 625px;
+    transition: top ease-in 2s;
+}
+.fila2 .columna3 img{
+    position: absolute;
+    left: 0;
+    transition: left ease-out 2s;
+}
+.fila2 .columna3 img:hover{
+    left: 300px;
+}
+.fila2 .columna3:hover{
+    top: 300px;
+}
+
+
