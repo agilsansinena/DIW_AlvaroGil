@@ -1,0 +1,40 @@
+body{
+    margin: 0 auto;
+}
+#fondo{
+    background-color: darkmagenta;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+}
+#suelo{
+    background-color: aqua;
+    height: 30%;
+    width: 100%;
+}
+#coche {
+    position: absolute;
+    top: 43%;
+    left: 20px;
+    transform: rotateY(180deg);
+    animation: mover 4s linear;
+    z-index: 2;
+}
+#coche img{
+    width: 300px;
+}
+@keyframes mover {
+    from {left: 0;}
+    to {left: 950px;}
+}
+#muro{
+    left: 58%;
+    position: absolute;
+    transform: rotateY(180deg);
+    bottom: 44px;
+    z-index: 1;
+}
+#muro img{
+    width: 590px;
+}
