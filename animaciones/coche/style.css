@@ -1,40 +1,131 @@
-body{
-    margin: 0 auto;
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 #fondo{
-    background-color: darkmagenta;
+    background-image: url(img/cielo.webp);
+    background-size: cover;
     height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column-reverse;
 }
 #suelo{
-    background-color: aqua;
+    background-color: green;
     height: 30%;
     width: 100%;
 }
 #coche {
     position: absolute;
-    top: 43%;
+    top: 54%;
     left: 20px;
     transform: rotateY(180deg);
-    animation: mover 4s linear;
+    animation-name: mover;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 3;
     z-index: 2;
 }
 #coche img{
-    width: 300px;
+    width: 180px;
 }
 @keyframes mover {
     from {left: 0;}
-    to {left: 950px;}
+    to {left: 900px;}
 }
 #muro{
-    left: 58%;
+    left: 31%;
     position: absolute;
-    transform: rotateY(180deg);
-    bottom: 44px;
+    transform: rotateY(110deg);
+    bottom: 174px;
     z-index: 1;
 }
 #muro img{
-    width: 590px;
+    width: 170px;
+}
+
+#pajaro1 {
+    position: absolute;
+    animation-name: volar1;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes volar1 {
+    0% {
+        left: 100px;
+        top: 200px;
+    }
+    25%{
+        left: 200px;
+        top: 300px;
+    }
+    50% {
+        left: 300px;
+        top: 200px;
+    }
+    75% {
+        left: 200px;
+        top: 100px;
+    }
+    100% {
+        left: 100px;
+        top: 200px;
+    }
+}
+#pajaro1 img{
+    width: 120px;
+}
+
+#pajaro2 {
+    position: absolute;
+    animation-name: volar2;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+@keyframes volar2 {
+    0% {
+        left: 1000px;
+        top: 100px;
+    }
+    25%{
+        left: 800px;
+        top: 50px;
+    }
+    50% {
+        left: 600px;
+        top: 100px;
+    }
+    75% {
+        left: 800px;
+        top: 150px;
+    }
+    100% {
+        left: 1000px;
+        top: 100px;
+    }
+}
+#pajaro2 img{
+    width: 120px;
+    transform: rotateY(180deg);
+}
+#edificio{
+    position: absolute;
+    right: 1px;
+    bottom: 180px;
+}
+#edificio img {
+    width: 440px;
+}
+#escombros{
+    right: 290px;
+    position: absolute;
+    bottom: 158px;
+}
+#escombros img{
+    width: 30%;
 }
