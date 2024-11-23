@@ -10,23 +10,45 @@ body, html {
     width: 100%;
     display: flex;
     flex-direction: column-reverse;
+    z-index: 0;
 }
 #suelo{
     background-color: green;
     height: 30%;
     width: 100%;
+    z-index: 2;
+}
+#sol {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: radial-gradient(circle at center, #ffcc00, #ff9900, #cc6600);
+    box-shadow: 0 0 50px 20px rgba(255, 204, 0, 0.7);
+    animation: girarSol 10s infinite linear, cambiarColor 13s infinite ease-in-out;
+}
+
+@keyframes girarSol {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes cambiarColor {
+    0% { background: yellow; }
+    50% { background: orange; }
+    100% { background: red; }
 }
 #coche {
     position: absolute;
     top: 54%;
     left: 20px;
     transform: rotateY(180deg);
-    animation-name: mover;
-    animation-duration: 1s;
-    animation-delay: 0.5s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in;
-    animation-iteration-count: 3;
+    animation: mover 3s linear forwards;
     z-index: 2;
 }
 #coche img{
@@ -34,8 +56,10 @@ body, html {
 }
 @keyframes mover {
     from {left: 0;}
-    to {left: 900px;}
+    to {left: 1000px;}
 }
+
+
 #muro{
     left: 31%;
     position: absolute;
@@ -46,6 +70,31 @@ body, html {
 #muro img{
     width: 170px;
 }
+#humo {
+    position: absolute;
+    left: 460px;
+    bottom: 270px;
+    opacity: 0;
+    animation: humoAnim 4s forwards;
+    animation-delay: 1.2s;
+}
+#humo img{
+    width: 150px;
+}
+@keyframes humoAnim {
+    0% {
+        opacity: 1;
+        transform: scale(0.5);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.5);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(2);
+    }
+}
 
 #pajaro1 {
     position: absolute;
@@ -53,6 +102,7 @@ body, html {
     animation-duration: 5s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+    animation-delay: 1s;
 }
 @keyframes volar1 {
     0% {
@@ -113,6 +163,53 @@ body, html {
     width: 120px;
     transform: rotateY(180deg);
 }
+
+#topo1{
+    position: absolute;
+    bottom: 23%;
+    width: 50px;
+    height: 50px;   
+    border-radius: 50%;
+    animation: aparecer 5s infinite;
+    z-index: 1;
+}
+#topo1 img {
+    width: 50px;
+}
+#topo2{
+    position: absolute;
+    bottom: 23%;
+    right: 1%;
+    width: 50px;
+    height: 50px;   
+    border-radius: 50%;
+    animation: aparecer 2s infinite;
+    z-index: 1;
+}
+#topo2 img {
+    width: 50px;
+}
+#topo3{
+    position: absolute;
+    bottom: 23%;
+    right: 75%;
+    width: 50px;
+    height: 50px;   
+    border-radius: 50%;
+    animation: aparecer 4s infinite;
+    animation-delay: 3s;
+    z-index: 1;
+}
+#topo3 img {
+    width: 50px;
+}
+@keyframes aparecer {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-50px); }
+    100% { transform: translateY(0); }
+}
+
+
 #edificio{
     position: absolute;
     right: 1px;
@@ -121,11 +218,111 @@ body, html {
 #edificio img {
     width: 440px;
 }
-#escombros{
-    right: 290px;
+
+#explosion {
     position: absolute;
-    bottom: 158px;
+    right: 380px;  
+    bottom: 300px;
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    opacity: 0;
+    animation: explosion 10s forwards ease-out; 
+    animation-delay: 2.9s;
+    z-index: 4;
+    transform-origin: bottom;
+}
+
+#explosion img {
+    width: 140px;
+    object-fit: contain;
+}
+
+@keyframes explosion {
+    0% {
+        opacity: 0;
+        transform: scale(0.5) translateY(0);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.5) translateY(-40px);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(2) translateY(-80px);
+    }
+}
+
+#escombros {
+    position: absolute;
+    left: 400px;
+    bottom: 140px;
+    opacity: 0;
+    animation: escombrosAnim 1.5s forwards ease-in-out;
+    animation-delay: 1s;
+} 
+#escombros{
+    right: 100px;
 }
 #escombros img{
     width: 30%;
+}
+
+@keyframes escombrosAnim {
+    0% {
+        
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#pantalla-blanca {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0;
+    animation: pantallaBlanca 4s forwards;
+    animation-delay: 10s;
+    z-index: 5;
+}
+
+@keyframes pantallaBlanca {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+#improperio {
+    position: absolute;
+    top: 50%;
+    left: 300px;
+    background: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    animation: improperioAnim 2s forwards ease-in-out;
+    animation-delay: 0.3s;
+    opacity: 0;
+    z-index: 4;
+}
+
+@keyframes improperioAnim {
+    0% {
+        opacity: 0;
+        transform: scale(0.5) translateY(20px);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.8) translateY(-20px);
+    }
 }

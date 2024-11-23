@@ -1,0 +1,27 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+#fondo{
+    background-image: url(img/fondo2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    z-index: 0;
+}
+
+#cockpit img {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+}
+#asteroide {
+    height: 150px;
+    width: 200px;
+}
+#asteroide img {
+    width: 120px;
+}
+
