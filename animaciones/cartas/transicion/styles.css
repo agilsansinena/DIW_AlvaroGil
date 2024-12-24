@@ -1,0 +1,134 @@
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: darkorange;
+    overflow: hidden; 
+}
+
+.todasCartas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+}
+
+.arriba, .abajo {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.carta {
+    width: 150px;
+    height: 190px;
+    display: flex;
+    position: relative;
+    perspective: 1000px;
+}
+
+.carta .anverso{
+    z-index: 0;
+    transform: rotateY(180deg);
+}
+.carta .reverso{
+    z-index: 10;
+    transform: rotateY(0deg);
+}
+
+.carta.seleccionada .anverso{
+    z-index: 10;
+    transform: rotateY(0deg);
+}
+.carta.seleccionada .reverso{
+    z-index: 0;
+    transform: rotateY(180deg);
+}
+
+.carta.error {
+    animation: vibrate 0.3s;
+}
+
+@keyframes vibrate {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+.carta div{
+    width: 150px;
+    height: 190px;
+    background-size: cover;
+    position: absolute;
+    transition: transform 0.6s;
+    backface-visibility: hidden;
+}
+
+.reverso{
+    background-image: url('../img/pokemonatras.webp');
+}
+
+.pikachu .anverso{
+    background-image: url('../img/pikachu.webp');
+}
+.charizard .anverso{
+    background-image: url('../img/charizard.webp');
+}
+.charizard2 .anverso{
+    background-image: url('../img/charizard2.webp');
+}
+.articuno .anverso{
+    background-image: url('../img/Articuno.webp');
+}
+.blastoise .anverso{
+    background-image: url('../img/blastoise.webp');
+}
+.gyarados .anverso{
+    background-image: url('../img/gyarados.webp');
+}
+.moltres .anverso{
+    background-image: url('../img/moltres.webp');
+}
+.zapdos .anverso{
+    background-image: url('../img/zapdos.webp');
+}
+
+.contadores {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.configuracion {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+

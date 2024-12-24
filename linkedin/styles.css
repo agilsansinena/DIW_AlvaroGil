@@ -1,216 +1,181 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f3f6f9;
-    color: #333;
+    background-color: #f3f2ef;
 }
 
-.navbar {
-    background-color: #0073b1;
-    color: white;
-    padding: 10px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+.linkedin-perfil {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.cabecera {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo-linkedin {
+    height: 50px;
+    margin-right: 20px;
+}
+
+.navegacion {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-.nav-container {
-    display: flex;
-    align-items: center;
-    flex: 1;
-    justify-content: space-between;
-}
-
-.logo {
-    font-size: 1.5em;
-    font-weight: bold;
+.navegacion a {
+    margin-right: 20px;
+    font-size: 18px;
+    color: #0073b1;
     text-decoration: none;
+}
+
+.navegacion button {
+    margin-left: 10px;
+    padding: 12px 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.unirse {
+    background-color: #0a66c2;
     color: white;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-}
-
-.nav-links li {
-    display: inline;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: white;
-    font-size: 0.9em;
-    transition: color 0.3s;
-}
-
-.nav-links a:hover {
-    color: #e3e3e3;
 }
 
 .iniciar-sesion {
     background-color: white;
-    color: #0073b1;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 20px;
-    font-weight: bold;
-    cursor: pointer;
+    border: 1px solid #0a66c2;
+    color: #0a66c2;
 }
 
-.iniciar-sesion:hover {
-    background-color: #e3e3e3;
-}
-
-.menu-hamburguesa {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.5em;
-    color: white;
-    cursor: pointer;
-}
-
-.contenedor-perfil {
-    max-width: 1000px;
-    margin: 0 auto;
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.banner img {
-    width: 100%;
-    height: auto;
+.principal {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    max-width: 100%;
+    margin: auto;
 }
 
 .perfil {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 20px;
-    border-bottom: 1px solid #ddd;
+    flex: 2;
 }
 
-.foto-perfil img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: 3px solid white;
-    margin-right: 20px;
-    flex-shrink: 0;
+.fondo-perfil img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
 }
 
 .info-perfil {
-    flex: 1;
-    min-width: 250px;
+    margin-top: -100px;
+    text-align: center;
+}
+
+.foto-perfil {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 4px solid white;
 }
 
 .info-perfil h1 {
-    margin: 0;
-    font-size: 1.8em;
-    color: #1e4b8e;
+    font-size: 32px;
+    margin: 15px 0;
+    color: #333333;
 }
 
 .info-perfil p {
-    margin: 5px 0;
-    font-size: 0.9em;
-    color: #555;
+    font-size: 18px;
+    color: #555555;
+    margin: 8px 0;
 }
 
-.info-perfil .correo,
-.info-perfil .github {
-    font-size: 0.85em;
-    color: #0073b1;
-}
-
-.info-perfil .seguidores {
+.instituciones {
     margin: 10px 0;
+    color: #666;
+    font-size: 16px;
 }
 
-.btn {
-    padding: 10px 15px;
-    border-radius: 20px;
-    font-size: 0.9em;
-    cursor: pointer;
-    margin-right: 10px;
-    margin-top: 10px;
+.empresa, .instituto {
+    display: block;
 }
 
-.btn.azul {
-    background-color: #0073b1;
-    color: white;
+.botones {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.boton-conectar, .boton-mensaje {
+    margin: 15px 10px;
+    padding: 12px 24px;
+    font-size: 16px;
     border: none;
+    border-radius: 6px;
+    cursor: pointer;
 }
 
-.btn.contorno {
-    background-color: transparent;
-    color: #0073b1;
-    border: 1px solid #0073b1;
+.boton-conectar {
+    background-color: #0a66c2;
+    color: white;
+}
+
+.boton-mensaje {
+    background-color: white;
+    border: 2px solid #0a66c2;
+    color: #0a66c2;
 }
 
 .cursos {
-    padding: 20px;
+    flex: 1.5;
+    margin-left: 30px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .cursos h2 {
-    margin-bottom: 15px;
-    font-size: 1.5em;
+    font-size: 22px;
+    margin-bottom: 25px;
+    color: #333333;
+}
+
+.cursos ul {
+    list-style: none;
+    padding: 0;
 }
 
 .curso {
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
-    flex-wrap: wrap;
+    margin-bottom: 20px;
 }
 
 .curso img {
-    width: 80px;
-    height: 60px;
-    object-fit: cover;
-    border-radius: 4px;
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
     margin-right: 15px;
 }
 
-.info-curso {
-    flex: 1;
-    min-width: 200px;
+.curso p {
+    font-size: 16px;
+    margin: 0;
 }
 
-.titulo-curso {
-    font-weight: bold;
-    color: #333;
-}
-
-.duracion-curso {
-    font-size: 0.9em;
-    color: #777;
-}
-
-.btn-enlace {
+.cursos a {
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 15px;
+    font-size: 16px;
     color: #0073b1;
     text-decoration: none;
-    font-size: 0.9em;
-}
-
-.btn-enlace:hover {
-    text-decoration: underline;
-}
-
-@media (max-width: 768px) {
-    .navbar {
-        justify-content: space-between;
-    }
-  
 }

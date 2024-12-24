@@ -7,11 +7,25 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <audio id="sonidoAceleracion" src="audio/audio.mp3"></audio>
+    <audio id="sonidoNave" src="audio/sonidoNave.mp3" loop autoplay></audio>
     <div id="fondo">
-        <div id="cockpit"><img src="img/fondo.png" alt=""></div>
-        <div id="asteroide"><img src="img/asteroide.webp" alt=""></div>
+        <div id="nave">
+            <div id="cockpit">
+                <img src="img/cockpit.png" alt="">
+                <div id="palanca"></div>
+            </div>
+        </div>
+        <div id="planeta">
+            <div id="satelite"></div>
+        </div>
+        <div id="contadorGasolina">Gasolina: 95</div>
+        <div id="planeta2"></div>
+        <div id="asteroide1"><img src="img/asteroide1.webp" alt=""></div>
+        <div id="asteroide2"><img src="img/asteroide2.png" alt=""></div>
+        <div id="asteroide3"><img src="img/asteroide3.png" alt=""></div>
     </div>
     
-
+    <script src="script.js"></script>
 </body>
 </html>

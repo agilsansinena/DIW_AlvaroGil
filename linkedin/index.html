@@ -3,67 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil LinkedIn</title>
+    <title>Perfil de LinkedIn</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#" class="logo">LinkedIn</a>
-            <ul class="nav-links">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Personas</a></li>
-                <li><a href="#">Learning</a></li>
-                <li><a href="#">Empleos</a></li>
-                <li><a href="#">Juegos</a></li>
-            </ul>
-            <button class="btn azul iniciar-sesion">Iniciar sesión</button>
-        </div>
-     
-    </nav>
-    <div class="contenedor-perfil">
-        <div class="banner">
-            <img src="img/banner.jpeg" alt="Banner de Ángel Vaquero">
-        </div>
-        <div class="perfil">
-            <div class="foto-perfil">
-                <img src="img/foto.jpeg" alt="Foto de Ángel Vaquero">
-            </div>
-            <div class="info-perfil">
-                <h1>Ángel Vaquero Toncheva</h1>
-                <p>Desarrollador Back-end con habilidades en Big Data</p>
-                <p class="correo">angelvaquerolarioja@gmail.com</p>
-                <p class="github">GitHub: avaquerolarioja2004</p>
-                <p class="ubicacion">Logroño, La Rioja, España</p>
-                <p class="seguidores">2 mil seguidores • Más de 500 contactos</p>
-                <button class="btn azul">Unirse para ver el perfil</button>
-                <button class="btn contorno">Enviar mensaje</button>
-            </div>
-        </div>
-        <div class="cursos">
-            <h2>Añade nuevas aptitudes con estos cursos</h2>
-            <div class="curso">
-                <img src="domina-scala.jpg" alt="Domina Scala">
-                <div class="info-curso">
-                    <p class="titulo-curso">Domina Scala</p>
-                    <p class="duracion-curso">1h 19m</p>
+    <div class="linkedin-perfil">
+        <header class="cabecera">
+            <img src="img/Logo-Linkedin.png" alt="Logo de LinkedIn" class="logo-linkedin">
+            <nav class="navegacion">
+                <a href="#">Artículos</a>
+                <a href="#">Personas</a>
+                <a href="#">Learning</a>
+                <a href="#">Empleos</a>
+                <a href="#">Juegos</a>
+                <a href="#">Descargar la aplicación</a>
+                <button class="unirse">Unirse ahora</button>
+                <button class="iniciar-sesion">Iniciar sesión</button>
+            </nav>
+        </header>
+
+        <div class="principal">
+            <section class="perfil">
+                <div class="fondo-perfil">
+                    <img src="img/banner.jpeg" alt="Fondo del perfil">
                 </div>
-            </div>
-            <div class="curso">
-                <img src="typescript-trucos.jpg" alt="TypeScript Trucos">
-                <div class="info-curso">
-                    <p class="titulo-curso">TypeScript: Trucos</p>
-                    <p class="duracion-curso">1h 45m</p>
+                <div class="info-perfil">
+                    <img src="img/foto.jpeg" alt="Ángel Vaquero" class="foto-perfil">
+                    <h1>Ángel Vaquero Toncheva</h1>
+                    <p>Logroño, La Rioja, España · <a href="#">Información de contacto</a></p>
+                    <p>2 mil seguidores · Más de 500 contactos</p>
+                    <div class="instituciones">
+                        <span class="empresa">Bosonit</span>
+                        <span class="instituto">IES COMERCIO</span>
+                    </div>
+                    <div class="botones">
+                        <button class="boton-conectar">Unirse para ver el perfil</button>
+                        <button class="boton-mensaje">Enviar mensaje</button>
+                    </div>
                 </div>
-            </div>
-            <div class="curso">
-                <img src="laravel-practico.jpg" alt="Laravel práctico">
-                <div class="info-curso">
-                    <p class="titulo-curso">Laravel práctico: API REST...</p>
-                    <p class="duracion-curso">3h 7m</p>
-                </div>
-            </div>
-            <a href="#" class="btn-enlace">Ver todos los cursos</a>
+            </section>
+            <aside class="cursos">
+                <h2>Añade nuevas aptitudes con estos cursos</h2>
+                <ul>
+                    <li>
+                        <div class="curso">
+                            <img src="curso-scala.png" alt="Domina Scala">
+                            <div>
+                                <p>Domina Scala</p>
+                                <p>1 h 19 m</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="curso">
+                            <img src="curso-typescript.png" alt="TypeScript: Trucos">
+                            <div>
+                                <p>TypeScript: Trucos</p>
+                                <p>1 h 45 m</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="curso">
+                            <img src="curso-laravel.png" alt="Laravel práctico">
+                            <div>
+                                <p>Laravel práctico: API REST para app corporativa web y móvil de hotel</p>
+                                <p>3 h 7 m</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <a href="#">Ver todos los cursos</a>
+            </aside>
         </div>
     </div>
 </body>
