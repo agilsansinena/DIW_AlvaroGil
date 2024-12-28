@@ -1,35 +1,22 @@
-body {
-  font-family: 'Manrope', sans-serif;
+body{
+  font-family: Inter, sans-serif;
   margin: 0;
-  display: table;
   width: 100%;
   height: 100vh;
-  background-color: F5F5F5;
-  color: #000;
+  background-color: cornsilk !important;
   line-height: 1.6;
   position: relative;
   font-family: sans-serif;
   overflow: hidden;
 }
-
-a {
-  text-decoration: none;
-  color: #007BFF;
-  transition: color 0.3s ease;
+.allNav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 9%;
+  height: 100vh;
+  overflow-y: scroll;
 }
-
-h1,
-h2,
-h3 {
-  font-family: 'Impact', sans-serif;
-  margin: 0;
-  color: #222;
-}
-
-/*nav*/
-
-
-
 .verticalNav {
   width: 40px;
   position: fixed;
@@ -43,6 +30,11 @@ h3 {
   cursor: pointer;
   transition: all 300ms ease-in;
   border-right: 2px solid transparent;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .verticalNav.active {
@@ -51,21 +43,18 @@ h3 {
   text-orientation: sideways;
 }
 
-.verticalNav.active .navContent {
-  margin-left: 120px;
+.verticalNav.active .item-content {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
 
-.navContent p {
-  line-height: 1.2em;
-}
 
-.navContent,
+.item-content,
 .verticalNav.active .siteNavLabel {
   display: none;
+  margin: 0;
 }
 
 .subNavMenu {
@@ -89,7 +78,6 @@ h3 {
   background: #424242;
 }
 
-/*Fin nav*/
 
 /*Skills*/
 .skill-icon {
@@ -148,30 +136,13 @@ h3 {
   list-style: none;
   padding: 0;
 }
+  
 
-@media (max-width: 768px) {
-  .column {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-}
 
-/* Perfil */
-.img-fluid {
-  max-width: 100%;
-  height: auto;
-}
+
 #dynamic-text {
   display: inline;
   font-weight: bold;
-}
-.container #perfil {
-  height: 100vh;
-  width: 80%;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  padding: 0;
 }
 
 .banner {
@@ -180,4 +151,82 @@ h3 {
   padding: 0;
   white-space: nowrap;
 }
+
+.perfil {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  align-items: center;
+}
+
+.left, .right {
+  flex: 1;
+  text-align: center;
+}
+
+.left {
+  padding: 20px;
+}
+
+.right img {
+  max-width: 100%;
+  border-radius: 10px;
+  width: 300px;
+  height: auto;
+}
+
+
+.navbar {
+  width: 91%;
+  height: 7%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#logo{
+  left: 10px;
+  width: 50px;
+  color: #000;
+}
+
+/*Boton CV*/
+.btn {
+  color: blueviolet;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid blueviolet;
+  padding: 10px 20px;
+  font-size: 17px;
+  cursor: pointer;
+  font-weight: bold;
+  background: transparent;
+  position: relative;
+  transition: all 1s;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.btn:hover {
+  color: white;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  top: 0;
+  left: -40px;
+  transform: skewX(45deg);
+  background-color: purple;
+  z-index: -1;
+  transition: all 1s;
+}
+
+.btn:hover::before {
+  width: 160%;
+}
+
 

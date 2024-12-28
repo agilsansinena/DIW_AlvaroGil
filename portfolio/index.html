@@ -1,162 +1,212 @@
 <!DOCTYPE html>
-<html lang="es" data-bs-theme="auto">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portafolio de Alvaro">
-  <title>Portafolio de Álvaro</title>
+  <title>Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body>
-  <div id="navWrap">
-    <nav class="navbar navbar-expand-md p-3">
-      <div class="container-fluid">
-        <div class="ms-auto">
-          <i class="fas fa-arrow-right" id="toggleRightMenu"></i>
-        </div>
-      </div>
-    </nav>
-    <div id="verticalNavWrap">
-      <div class='verticalNav'>
-        <div class="siteNavLabel text-center text-white">Proyectos</div>
-        <div class="navContent">
-          <div class="container-fluid">
-            <div class="row align-items-center">
-              <div class="col">
-                <h2 class="jumboHeading">Proyectos</h2>
-                <p class="pt-4 ps-4 pe-4">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui aliquid laudantium, veniam eaque
-                  similique vel quaerat perspiciatis? Atque qui sed maxime quod culpa, fugiat, blanditiis eos totam
-                  praesentium, excepturi ipsa.
-                </p>
-                <div class="ms-4">
-                  <button class="btn btn-info">Download now</button>
-                </div>
-              </div>
-            </div>
+<body data-aos-easing="ease-out-cubic" data-aos-duration="800" data-aos-delay="0">
+  <!-- Navbar -->
+  <section class="fixed">
+    <div class="px-5 mb-3">
+      <nav class="navbar navbar-expand-lg navbar-custom sticky-top" data-aos="fade-down">
+        <a id="icono" href="#">
+          <img src="img/logo-removebg-preview.png" alt="" style="height: 50px; width: 60px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#responsive-navbar-nav"
+          aria-controls="responsive-navbar-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="responsive-navbar-nav">
+          <div class="navbar-nav mx-auto">
+            <a class="nav-item nav-link" href="#" data-aos="fade-left" data-aos-delay="100">Inicio</a>
+            <a class="nav-item nav-link" href="#SobreMi" data-aos="fade-left" data-aos-delay="200">Sobre mí</a>
+            <a class="nav-item nav-link" href="#proyectos" data-aos="fade-left" data-aos-delay="300">Proyectos</a>
+            <a class="nav-item nav-link" href="#habilidades" data-aos="fade-left" data-aos-delay="400">Habilidades</a>
+            <a class="nav-item nav-link" href="#formacion" data-aos="fade-left" data-aos-delay="500">Formación</a>
           </div>
         </div>
-      </div>
-      <div class="verticalNav">
-        <div class="siteNavLabel text-center text-white">Formación</div>
-        <div class="navContent">
-          <div class="container-fluid">
-            <div class="container text-center my-5">
-              <h2 class="mb-4">Habilidades</h2>
-              <div class="row justify-content-center">
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
-                  <div class="skill-icon shadow-sm">
-                    <img src="img/html.png" alt="HTML5" class="img-fluid">
-                  </div>
-                </div>
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
-                  <div class="skill-icon shadow-sm">
-                    <img src="img/css.png" alt="CSS3" class="img-fluid">
-                  </div>
-                </div>
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
-                  <div class="skill-icon shadow-sm">
-                    <img src="img/javascript.png" alt="JavaScript" class="img-fluid">
-                  </div>
-                </div>
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
-                  <div class="skill-icon shadow-sm">
-                    <img src="img/java.png" alt="java" class="img-fluid">
-                  </div>
-                </div>
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
-                  <div class="skill-icon shadow-sm">
-                    <img src="img/php.png" alt="php" class="img-fluid">
-                  </div>
-                </div>
-              </div>
-            </div>
+        <!-- Interruptor de Tema -->
+        <div class="switch-container">
+          <label class="switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider"></span>
+          </label>
+        </div>
+      </nav>
+    </div>
+  </section>
 
-            <div id="formacion" class="mt-5">
-              <h2 class="text-center">Formación</h2>
-              <div class="timeline">
-                <div class="timeline-item">
-                  <span class="icon icon-info"><i class="fa fa-window-minimize"></i></span>
-                  <h5 class="my-3">ESO</h5>
-                  <p>Conocimientos básicos en ciencias, matemáticas y lenguas, proporcionándome una sólida base
-                    educativa.</p>
-                </div>
-                <div class="timeline-item">
-                  <span class="icon icon-secondary"><i class="fa fa-window-minimize"></i></span>
-                  <h5 class="my-3">Grado Medio</h5>
-                  <p>Especialización en desarrollo de aplicaciones, aprendiendo fundamentos de programación y bases de
-                    datos.</p>
-                </div>
-                <div class="timeline-item">
-                  <span class="icon icon-danger"><i class="fa fa-window-minimize"></i></span>
-                  <h5 class="my-3">Grado Superior</h5>
-                  <p>Formación avanzada en desarrollo de software, incluyendo frameworks modernos como Angular.</p>
-                </div>
-              </div>
-            </div>
+  <!-- Sección de Perfil -->
+  <section id="Inicio titulo" class="perfil">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Columna izquierda: Información personal -->
+        <div class="col-12 col-md-6" data-aos="fade-up">
+          <h1 class="display-4 fw-bold" id="nombre" data-aos="fade-up" data-aos-delay="600">Álvaro Gil</h1>
+          <div class="banner d-inline-block" data-aos="fade-up" data-aos-delay="700">
+            Apasionado de <span id="dynamic-text"></span>
+          </div>
+          <p class="fs-5 text-secondary mt-3" data-aos="fade-up" data-aos-delay="800">Web Developer</p>
+          <div class="d-flex" data-aos="fade-up" data-aos-delay="900">
+            <a href="https://github.com/themich3lin" class="text-black fs-4 mx-2" title="Github">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="#" class="text-black fs-4 mx-2" title="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="#" class="text-black fs-4 mx-2" title="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+          <div class="mt-3 mb-3" data-aos="fade-up" data-aos-delay="1000">
+            <a href="Curriculum_AlvaroGil.pdf" class="btn btn-primary" download>Descargar CV</a>
           </div>
         </div>
-      </div>
 
-      <div class='verticalNav text-center text-white'>
-        <div class="siteNavLabel text-center">Sobre mí</div>
-        <div class="navContent">
-          <div class="container-fluid">
-            <div class="row align-items-center">
-              <div class="col-md-7 mx-auto">
-                <h2 class="jumboHeading">Sobre mí</h2>
-                <div class="container">
-                  <h2>Sobre mí</h2>
-                  <div class="row mt-4">
-                    <div class="col-md-6">
-                      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus saepe, vero excepturi
-                        ullam, ducimus odit ratione in, unde autem temporibus dicta quae nemo officiis obcaecati sint
-                        ipsum suscipit veritatis exercitationem?</p>
-                      <a href="CV_Alvaro.pdf" class="btn btn-primary" download>Descargar CV</a>
-                    </div>
-                    <div class="col-md-6">
-                      <img src="foto.jpg" alt="" class="img-fluid rounded-circle shadow-lg">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <!-- Columna derecha: Foto -->
+        <div class="col-12 col-md-6 d-flex justify-content-center align-items-center" data-aos="fade-up"
+          data-aos-delay="1100">
+          <div class="rounded-circle overflow-hidden" style="width: 250px; height: 250px;">
+            <img src="img/javascript.png" alt="foto de Álvaro Gil" class="img-fluid">
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="container" id="perfil">
-    <div class="row justify-content-center align-items-center">
-      <div class="col-6 col-md-4 flex-column">
-        <p class="fs-5 text-secondary">Hola, mi nombre es</p>
-        <h1 class="display-4 fw-bold">Álvaro Gil.</h1>
-        <div class="banner d-inline-block">
-          Apasionado de <span id="dynamic-text"></span>
-        </div>
-        <p class="fs-5 text-secondary mt-3">Backend Developer</p>
-        <div class=" justify-content-center gap-4 mt-4">
-          <a href="https://github.com/themich3lin" class="text-black fs-4" title="Github"><i
-              class="fab fa-github"></i></a>
-          <a href="#" class="text-black fs-4"><i class="fab fa-linkedin"></i></a>
-          <a href="#" class="text-black fs-4"><i class="fab fa-twitter"></i></a>
-        </div>
-      </div>
-      <div class="col-6 col-md-4 text-center">
-        <div class="rounded-circle overflow-hidden" style="width: 250px; height: 250px;">
-          <img src="img/javascript.png" alt="foto" class="img-fluid">
+  </section>
+
+  <!-- Sección de Sobre Mí -->
+  <section id="SobreMi" class="mb-5 justify-content-center ">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-7 mx-auto text-center" data-aos="fade-up">
+          <h2 class="titulo" style="font-size: 2.5rem;">Sobre mí</h2>
+          <p style="font-size: 1.2rem; line-height: 1.6; color: #555;" data-aos="fade-up" data-aos-delay="100">
+            ¡Hola! Soy Álvaro Gil, un apasionado desarrollador web creando aplicaciones y sitios web interactivos.
+            Me encanta aprender y enfrentar nuevos desafíos que me permitan crecer.
+          </p>
+          <p style="font-size: 1.2rem; line-height: 1.6; color: #555;" data-aos="fade-up" data-aos-delay="200">
+            Busco siempre colaborar en proyectos innovadores que mejoren la experiencia del usuario.
+            ¡Conectemos y hagamos algo increíble juntos!
+          </p>
         </div>
       </div>
     </div>
-  </div>
+  </section>
+
+  <!-- Sección de Proyectos -->
+  <section id="proyectos" class="titulo" data-aos="fade-up">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12 text-center">
+                <h2 class="jumboHeading mb-4">Proyectos</h2>
+            </div>
+        </div>
+        <div class="row align-items-center justify-content-center">
+            <!-- Tarjeta de Proyecto 1 -->
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card">
+                    <img src="img/portfolio.png" class="card-img-top" alt="Proyecto 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Portfolio</h5>
+                        <ul class="list-unstyled">
+                            <li>✔️ Diseño responsivo</li>
+                            <li>✔️ Navegación fluida</li>
+                            <li>✔️ Secciones para proyectos, habilidades y formación</li>
+                        </ul>
+                        <p class="text-muted">HTML, CSS, JavaScript, Bootstrap</p>
+                        <a href="#" class="btn btn-primary">Ver Proyecto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <!-- Sección Habilidades -->
+  <section id="habilidades" class="text-center titulo">
+    <div class="container">
+      <h2 class="mb-4">Habilidades</h2>
+      <div class="row align-items-center justify-content-center">
+        <div class="col-6 col-md-4 col-lg-3 skill-icon" data-aos="fade-up">
+          <img src="img/html.png" alt="HTML5" class="img-fluid">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 skill-icon" data-aos="fade-up" data-aos-delay="100">
+          <img src="img/css.png" alt="CSS3" class="img-fluid">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 skill-icon" data-aos="fade-up" data-aos-delay="200">
+          <img src="img/javascript.png" alt="JavaScript" class="img-fluid">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 skill-icon" data-aos="fade-up" data-aos-delay="300">
+          <img src="img/java.png" alt="Java" class="img-fluid">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 skill-icon" data-aos="fade-up" data-aos-delay="400">
+          <img src="img/php.png" alt="PHP" class="img-fluid">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 skill-icon" data-aos="fade-up" data-aos-delay="500">
+          <img src="img/Git.png" alt="GIT" class="img-fluid">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 skill-icon" data-aos="fade-up" data-aos-delay="600">
+          <img src="img/docker.png" alt="DOCKER" class="img-fluid">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 skill-icon" data-aos="fade-up" data-aos-delay="700">
+          <img src="img/Bootstrap.png" alt="Bootstrap" class="img-fluid">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 skill-icon" data-aos="fade-up" data-aos-delay="800">
+          <img src="img/sql.png" alt="SQL" class="img-fluid">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 skill-icon" data-aos="fade-up" data-aos-delay="900">
+          <img src="img/codeigniter.webp" alt="codeigniter" class="img-fluid">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 skill-icon" data-aos="fade-up" data-aos-delay="1000">
+          <img src="img/Figma.png" alt="figma" class="img-fluid">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 skill-icon" data-aos="fade-up" data-aos-delay="1100">
+          <img src="img/linux.png" alt="linux" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Formación -->
+  <section id="formacion" class="mt-5">
+    <h2 class="text-center titulo" data-aos="fade-up">Formación</h2>
+    <div class="timeline">
+      <!-- Item 1 -->
+      <div class="timeline-item" data-aos="fade-right" data-aos-duration="1000">
+        <span class="icon icon-info titulo"><i class="fa fa-window-minimize"></i></span>
+        <h5 class="my-3 titulo">ESO</h5>
+        <p>Conocimientos básicos en ciencias, matemáticas y lenguas, proporcionándome una sólida base
+          educativa.</p>
+      </div>
+      <!-- Item 2 -->
+      <div class="timeline-item" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+        <span class="icon icon-secondary titulo"><i class="fa fa-window-minimize"></i></span>
+        <h5 class="my-3 titulo">Grado Medio</h5>
+        <p>Especialización en desarrollo de aplicaciones, aprendiendo fundamentos de programación y
+          bases de
+          datos.</p>
+      </div>
+      <!-- Item 3 -->
+      <div class="timeline-item" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">
+        <span class="icon icon-danger titulo"><i class="fa fa-window-minimize"></i></span>
+        <h5 class="my-3 titulo">Grado Superior</h5>
+        <p>Formación avanzada en desarrollo de software, incluyendo frameworks modernos como Angular.</p>
+      </div>
+    </div>
+  </section>
+
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
   <script src="index.js"></script>
 </body>
 
