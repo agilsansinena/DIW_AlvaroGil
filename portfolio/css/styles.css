@@ -15,7 +15,10 @@ body {
 section {
   scroll-margin-top: 70px; /* Ajusta según la altura del navbar */
 }
-
+img {
+  max-width: 100%;
+  height: auto;
+}
 /*TEMA CLARO*/
 body.light-theme {
   background-color: #E0E0E0;
@@ -34,11 +37,15 @@ body.light-theme .navbar-toggler {
 body.light-theme .navbar-toggler-icon {
   background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%231F2426" height="30" width="30" viewBox="0 0 30 30"%3E%3Cpath d="M0 4h30v4H0zm0 11h30v4H0zm0 11h30v4H0z"/%3E%3C/svg%3E');
 }
+body.light-theme .navbar-nav .nav-link:hover {
+  color: #193BAC;
+}
+
 
 
 /* TEMA OSCURO */
 body.dark-theme {
-  background-color: #1F2426;
+  background-color: #111010;
   color: #E0E0E0;
 }
 body.dark-theme #nombre {
@@ -54,9 +61,16 @@ body.dark-theme .navbar-toggler {
 body.dark-theme .navbar-toggler-icon {
   background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23E0E0E0" height="30" width="30" viewBox="0 0 30 30"%3E%3Cpath d="M0 4h30v4H0zm0 11h30v4H0zm0 11h30v4H0z"/%3E%3C/svg%3E');
 }
+body.dark-theme #sobreMi{
+  color: #E0E0E0;
+}
 
 /*TITULOS*/
 .titulo{
+  color: #193BAC;
+  font-size: 3rem;
+}
+.tituloFormacion{
   color: #193BAC;
 }
 /*NAVBAR*/
@@ -80,10 +94,6 @@ body.dark-theme .navbar-toggler-icon {
   background-color: transparent;
   backdrop-filter: blur(12px);
   padding-bottom: 15px;
-}
-
-.navbar-nav .nav-link {
-  color: #1F2426;
 }
 .nav-item.nav-link{
   font-size: 1.3rem;
@@ -163,7 +173,7 @@ body.dark-theme .navbar-toggler-icon {
   height: auto;
 }
 /*Boton CV*/
-.btn {
+.btncv {
   color: #193BAC;
   text-transform: uppercase;
   text-decoration: none;
@@ -180,10 +190,10 @@ body.dark-theme .navbar-toggler-icon {
   border-radius: 20px;
   transition: background-color 0.3s;
 }
-.btn:hover {
+.btncv:hover {
   color: white;
 }
-.btn::before {
+.btncv::before {
   content: "";
   position: absolute;
   height: 100%;
@@ -195,15 +205,27 @@ body.dark-theme .navbar-toggler-icon {
   z-index: -1;
   transition: all 1s;
 }
-.btn:hover::before {
+.btncv:hover::before {
   width: 160%;
 }
 @media (max-width: 768px) {
   .perfil {
-    padding-top: 80px;
+    padding-top: 300px;
   }
 }
+.rounded-circle {
+  border-image-slice: 1;
+  animation: pulse 3s infinite;
+}
 
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
 
 /*SECCION SOBRE MI */
 #SobreMi{
@@ -317,9 +339,25 @@ body.dark-theme .navbar-toggler-icon {
   list-style: none;
   padding: 0;
 }
+footer{
+  width: 100%;
+  height: 20vh;
+}
 
-
-
+#scrollToTop {
+  position: fixed;
+  bottom: 20px; /* Ajusta la posición vertical */
+  right: 20px; /* Ajusta la posición horizontal */
+  z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+  color: white; /* Color del ícono */
+  border: none; /* Sin borde */
+  border-radius: 50%; /* Botón redondeado */
+  width: 50px; /* Ancho del botón */
+  height: 50px; /* Alto del botón */
+  text-align: center; /* Centrar el ícono */
+  line-height: 50px; /* Centrar verticalmente el ícono */
+  font-size: 24px; /* Tamaño del ícono */
+}
 
 
 

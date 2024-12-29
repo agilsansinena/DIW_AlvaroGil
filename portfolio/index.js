@@ -1,7 +1,16 @@
 AOS.init();
 document.addEventListener("DOMContentLoaded", () => {
   const dynamicText = document.getElementById("dynamic-text");
-  const phrases = ["la música", "los juegos", "leer libros", "la tecnología"];
+  const phrases = [
+    "el Desarrollo Web",
+    "la Programación",
+    "las Tecnologías de la Información",
+    "el Desarrollo Móvil",
+    "la Inteligencia Artificial",
+    "la Ciberseguridad",
+    "el Desarrollo de Software",
+    "la Automatización"
+  ];
   let currentPhraseIndex = 0;
   let currentCharIndex = 0;
   let deleting = false;
@@ -57,6 +66,23 @@ toggle.addEventListener('change', () => {
     body.classList.replace('dark-theme', 'light-theme');
     localStorage.setItem('theme', 'light-theme'); // Guardar el tema en localStorage
   }
+});
+
+$(document).ready(function() {
+  // Mostrar el botón cuando se desplaza hacia abajo
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 100) {
+      $('#scrollToTop').fadeIn();
+    } else {
+      $('#scrollToTop').fadeOut();
+    }
+  });
+
+  // Desplazamiento suave al hacer clic en el botón
+  $('#scrollToTop').click(function(e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: 0 }, 800); // 800 ms para la animación
+  });
 });
 
 
