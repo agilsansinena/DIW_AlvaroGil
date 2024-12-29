@@ -14,7 +14,7 @@
 
 <body data-aos-easing="ease-out-cubic" data-aos-duration="800" data-aos-delay="0">
   <!-- Navbar -->
-  <section class="fixed">
+  <div class="fixed">
     <div class="px-5 mb-3">
       <nav class="navbar navbar-expand-lg navbar-custom sticky-top" data-aos="fade-down">
         <a id="icono" href="#">
@@ -42,10 +42,10 @@
         </div>
       </nav>
     </div>
-  </section>
+  </div>
 
   <!-- Sección de Perfil -->
-  <section id="perfil titulo" class="py-5 mb-5">
+  <section id="perfil" class="py-5">
     <div class="container">
       <div class="row align-items-center">
         <!-- Columna izquierda: Información personal -->
@@ -58,11 +58,11 @@
             Soy un <strong>desarrollador web</strong> con experiencia en crear soluciones creativas y funcionales. Mi
             pasión por la tecnología y el diseño me impulsa a mejorar cada día.
           </p>
-          <p class="fs-6 mt-2">
+          <p class="fs-5 mt-2">
             Tengo experiencia trabajando en proyectos que van desde pequeñas aplicaciones web hasta plataformas más
             complejas. Disfruto enfrentando nuevos desafíos y aprendiendo constantemente.
           </p>
-          <a href="#SobreMi" class="btn btn-primary mt-4 btncv">
+          <a href="#SobreMi" class="btn btn-primary mt-4 mb-4 btncv">
             Conóceme más
           </a>
         </div>
@@ -81,7 +81,7 @@
 
 
   <!-- Sección de Sobre Mí -->
-  <section id="SobreMi" class="justify-content-center py-5">
+  <section id="SobreMi" class="py-5 justify-content-center align-items-center">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-6 text-center text-lg-start" data-aos="fade-right">
@@ -103,7 +103,7 @@
 
 
   <!-- Sección de Proyectos -->
-  <section id="proyectos" class="py-5">
+  <section id="proyectos" class="py-5 align-items-center">
     <div class="container">
       <div class="row mb-4">
         <div class="col-12 text-center">
@@ -137,7 +137,7 @@
 
 
   <!-- Sección Habilidades -->
-  <section id="habilidades" class="text-center py-5">
+  <section id="habilidades" class="py-5 text-center">
     <div class="container">
       <h2 class="mb-4  titulo">Habilidades</h2>
 
@@ -207,53 +207,56 @@
   <section id="formacion" class="py-5">
     <h2 class="text-center titulo" data-aos="fade-up">Formación</h2>
     <div class="timeline">
-      <!-- Item 1 -->
-      <div class="timeline-item" data-aos="fade-right" data-aos-duration="1000">
-        <span class="icon icon-info tituloFormacion"><i class="fa fa-window-minimize"></i></span>
-        <h5 class="my-3 tituloFormacion">ESO</h5>
-        <p>Conocimientos básicos en ciencias, matemáticas y lenguas, proporcionándome una sólida base
-          educativa.</p>
-      </div>
-      <!-- Item 2 -->
-      <div class="timeline-item" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
-        <span class="icon icon-secondary tituloFormacion"><i class="fa fa-window-minimize"></i></span>
-        <h5 class="my-3 tituloFormacion">Grado Medio</h5>
-        <p>Especialización en desarrollo de aplicaciones, aprendiendo fundamentos de programación y
-          bases de
-          datos.</p>
-      </div>
-      <!-- Item 3 -->
-      <div class="timeline-item" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">
-        <span class="icon icon-danger tituloFormacion"><i class="fa fa-window-minimize"></i></span>
-        <h5 class="my-3 tituloFormacion">Grado Superior</h5>
-        <p>Formación avanzada en desarrollo de software, incluyendo frameworks modernos como Angular.</p>
-      </div>
+        <!-- Item 1 -->
+        <div class="timeline-item" data-aos="fade-right" data-aos-duration="1000">
+            <div class="icon-container">
+                <span class="icon icon-info tituloFormacion"><i class="fa fa-book-open"></i></span>
+            </div>
+            <h5 class="my-3 tituloFormacion">Educación Secundaria Obligatoria (ESO)</h5>
+            <p class="fs-5">Adquirí conocimientos básicos en ciencias, matemáticas y lenguas, lo que me proporcionó una sólida base educativa para mi futuro académico.</p>
+        </div>
+        <!-- Item 2 -->
+        <div class="timeline-item" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+            <div class="icon-container">
+                <span class="icon icon-secondary tituloFormacion"><i class="fa fa-laptop"></i></span>
+            </div>
+            <h5 class="my-3 tituloFormacion">Grado Medio en Desarrollo de Aplicaciones</h5>
+            <p class="fs-5">Me especialicé en el desarrollo de aplicaciones, aprendiendo los fundamentos de programación y bases de datos, lo que me permitió adquirir habilidades prácticas en el campo.</p>
+        </div>
+        <!-- Item 3 -->
+        <div class="timeline-item" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">
+            <div class="icon-container">
+                <span class="icon icon-danger tituloFormacion"><i class="fa fa-code"></i></span>
+            </div>
+            <h5 class="my-3 tituloFormacion">Grado Superior en Desarrollo de Software</h5>
+            <p class="fs-5">Recibí formación avanzada en desarrollo de software, incluyendo el uso de frameworks modernos como Angular, lo que me preparó para enfrentar desafíos en el mundo laboral.</p>
+        </div>
     </div>
-  </section>
+</section>
 
   <!-- Footer -->
-<footer class="bg-dark text-white text-center py-2">
-  <div class="container">
-    <h5 class="mb-3">Contacta conmigo</h5>
-    <div class="d-flex justify-content-center mb-3">
-      <a href="https://github.com/agilsansinena" class="text-white mx-2" title="Github">
-        <i class="fab fa-github fa-2x"></i>
+  <footer class="bg-dark text-white text-center py-4" data-aos="fade-up">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <h5 class="mb-3" data-aos="fade-up" data-aos-delay="200">Contacta conmigo</h5>
+      <div class="d-flex justify-content-center mb-3" data-aos="fade-up" data-aos-delay="300">
+        <a href="https://github.com/agilsansinena" class="text-white mx-2" title="Github">
+          <i class="fab fa-github fa-2x"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/alvaro-gil-645ab1261/" class="text-white mx-2" title="LinkedIn">
+          <i class="fab fa-linkedin fa-2x"></i>
+        </a>
+        <a href="mailto:agilsansinena@gmail.com" class="text-white mx-2" title="Enviar Correo">
+          <i class="fas fa-envelope fa-2x"></i>
+        </a>
+      </div>
+      <p class="mb-0" data-aos="fade-up" data-aos-delay="400">© 2024 Álvaro Gil. Todos los derechos reservados.</p>
+      <p class="mb-0" data-aos="fade-up" data-aos-delay="500">Contacto: agilsansinena@gmail.com</p>
+      <a href="referencias.html" class="btn text-white" data-aos="fade-up" data-aos-delay="600">Ver Referencias</a>
+      <a href="#Inicio titulo" class="btn" id="scrollToTop" data-aos="fade-up" data-aos-delay="700">
+        <i class="fas fa-arrow-up"></i>
       </a>
-      <a href="https://www.linkedin.com/in/alvaro-gil-645ab1261/" class="text-white mx-2" title="LinkedIn">
-        <i class="fab fa-linkedin fa-2x"></i>
-      </a>
-      <a href="mailto:agilsansinena@gmail.com" class="text-white mx-2" title="Enviar Correo">
-        <i class="fas fa-envelope fa-2x"></i>
-    </a>
     </div>
-    <p class="mb-0">© 2024 Álvaro Gil. Todos los derechos reservados.</p>
-    <p class="mb-0">Contacto: agilsansinena@gmail.com</p>
-    <a href="referencias.html" class="btn text-white">Ver Referencias</a>
-    <a href="#Inicio titulo" class="btn" id="scrollToTop">
-      <i class="fas fa-arrow-up"></i>
-    </a>
-  </div>
-</footer>
+  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

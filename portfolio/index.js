@@ -69,7 +69,6 @@ toggle.addEventListener('change', () => {
 });
 
 $(document).ready(function() {
-  // Mostrar el botón cuando se desplaza hacia abajo
   $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {
       $('#scrollToTop').fadeIn();
@@ -77,13 +76,12 @@ $(document).ready(function() {
       $('#scrollToTop').fadeOut();
     }
   });
-
-  // Desplazamiento suave al hacer clic en el botón
   $('#scrollToTop').click(function(e) {
     e.preventDefault();
-    $('html, body').animate({ scrollTop: 0 }, 800); // 800 ms para la animación
+    $('html, body').animate({ scrollTop: 0 }, 1000);
   });
 });
+
 
 
 

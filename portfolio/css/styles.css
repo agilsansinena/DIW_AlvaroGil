@@ -1,4 +1,7 @@
 @import url(../css/clash-display.css);
+html{
+  margin: 0;
+}
 /*BODY*/
 body {
   font-family: 'ClashDisplay', sans-serif;
@@ -11,9 +14,10 @@ body {
   justify-content: center;
   padding-top: 60px; 
   transition: background-color 0.3s, color 0.3s;
+  overflow-x: hidden;
 }
 section {
-  scroll-margin-top: 70px; /* Ajusta según la altura del navbar */
+  scroll-margin-top: 70px;
 }
 img {
   max-width: 100%;
@@ -71,6 +75,7 @@ body.dark-theme #sobreMi{
   font-size: 3rem;
 }
 .tituloFormacion{
+  font-size: 1.8rem;
   color: #193BAC;
 }
 /*NAVBAR*/
@@ -89,8 +94,15 @@ body.dark-theme #sobreMi{
 .fix{
   overflow: hidden;
 }
+.navbar-nav{
+  display: flex;
+  flex-wrap: wrap;
+}
 .navbar-custom{
   border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background-color: transparent;
   backdrop-filter: blur(12px);
   padding-bottom: 15px;
@@ -137,14 +149,13 @@ body.dark-theme #sobreMi{
   transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
 }
 .switch input:checked + .slider {
-  box-shadow: 0 0 20px rgba(9, 117, 241, 0.8);
+  box-shadow: 0 0 20px #193BAC;
   border: 2px solid #0974f1;
 }
 
 .switch input:checked + .slider:before {
   transform: translateX(1.5em);
 }
-
 
 /*SECCION PERFIL*/
 #perfil {
@@ -207,11 +218,7 @@ body.dark-theme #sobreMi{
 .btncv:hover::before {
   width: 160%;
 }
-@media (max-width: 768px) {
-  .perfil {
-    padding-top: 300px;
-  }
-}
+
 .rounded-circle {
   border-image-slice: 1;
   animation: pulse 3s infinite;
@@ -232,8 +239,6 @@ body.dark-theme #sobreMi{
   padding: 1rem;
   text-align: center;
 }
-
-
 
 /*SECCION PROYECTOS */
 #proyectos{
@@ -256,6 +261,7 @@ body.dark-theme #sobreMi{
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
+
 
 
 /*SECCION HABILIDADES*/
@@ -292,7 +298,6 @@ body.dark-theme #sobreMi{
 /*SECCION FORMACION*/
 #formacion{
   width: 100%;
-  height: 90vh;
   padding: 1rem;
 }
 .timeline {
@@ -306,58 +311,48 @@ body.dark-theme #sobreMi{
   position: relative;
   margin-bottom: 30px;
   padding-left: 20px;
+  text-align: left;
 }
 
 .icon {
   position: absolute;
-  left: -40px;
+  left: -42px;
   top: 0;
   background-color: transparent;
   width: 40px;
   height: 40px;
 }
 
-.timeline li {
-  background: #007BFF;
-  color: #fff;
-  border-radius: 8px;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  transition: background 0.3s;
-}
 
-.timeline li:hover {
-  background: #0056b3;
-}
-
-.timeline ul {
-  list-style: none;
-  padding: 0;
-}
-footer{
-  width: 100%;
-  height: 25vh;
-}
 
 #scrollToTop {
   position: fixed;
-  bottom: 20px; /* Ajusta la posición vertical */
-  right: 20px; /* Ajusta la posición horizontal */
-  z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
-  color: white; /* Color del ícono */
-  border: none; /* Sin borde */
-  border-radius: 50%; /* Botón redondeado */
-  width: 50px; /* Ancho del botón */
-  height: 50px; /* Alto del botón */
-  text-align: center; /* Centrar el ícono */
-  line-height: 50px; /* Centrar verticalmente el ícono */
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
   font-size: 24px;
 }
 
 @media (max-width: 768px) {
-  #SobreMi, #proyectos, #habilidades, #formacion {
-    height: auto; /* Asegúrate de que la altura sea automática */
-    padding: 1rem; /* Ajusta el padding si es necesario */
+  #SobreMi, #proyectos, #habilidades, #formacion, #perfil{
+    height: auto; 
+    padding: 1rem;
+  }
+  .titulo{
+    font-size: 2rem;
+  }
+  #nombre{
+    font-size: 2.8rem;
+  }
+  .banner{
+    height: 52px;
   }
 }
 
