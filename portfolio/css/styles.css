@@ -15,6 +15,7 @@ body {
   padding-top: 60px; 
   transition: background-color 0.3s, color 0.3s;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 section {
   scroll-margin-top: 70px;
@@ -67,6 +68,9 @@ body.dark-theme .navbar-toggler-icon {
 }
 body.dark-theme #sobreMi{
   color: #E0E0E0;
+}
+body.dark-theme .timeline{
+  border-left: 2px solid white;
 }
 
 /*TITULOS*/
@@ -238,6 +242,7 @@ body.dark-theme #sobreMi{
   width: 100%;
   padding: 1rem;
   text-align: center;
+  justify-content: center;
 }
 
 /*SECCION PROYECTOS */
@@ -316,7 +321,7 @@ body.dark-theme #sobreMi{
 
 .icon {
   position: absolute;
-  left: -42px;
+  left: -50px;
   top: 0;
   background-color: transparent;
   width: 40px;
