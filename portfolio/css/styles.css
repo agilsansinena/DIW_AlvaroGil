@@ -1,7 +1,9 @@
 @import url(../css/clash-display.css);
-html{
+
+html {
   margin: 0;
 }
+
 /*BODY*/
 body {
   font-family: 'ClashDisplay', sans-serif;
@@ -12,36 +14,44 @@ body {
   line-height: 1.6;
   align-items: center;
   justify-content: center;
-  padding-top: 60px; 
+  padding-top: 60px;
   transition: background-color 0.3s, color 0.3s;
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
+
 section {
   scroll-margin-top: 70px;
 }
+
 img {
   max-width: 100%;
   height: auto;
 }
+
 /*TEMA CLARO*/
 body.light-theme {
   background-color: #E0E0E0;
   color: #1F2426;
 }
+
 body.light-theme #nombre {
   color: #1F2426;
 }
-body.light-theme .navbar-nav .nav-link{
+
+body.light-theme .navbar-nav .nav-link {
   color: #1F2426;
 }
+
 body.light-theme .navbar-toggler {
   background-color: #E0E0E0;
   color: #1F2426;
 }
+
 body.light-theme .navbar-toggler-icon {
   background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%231F2426" height="30" width="30" viewBox="0 0 30 30"%3E%3Cpath d="M0 4h30v4H0zm0 11h30v4H0zm0 11h30v4H0z"/%3E%3C/svg%3E');
 }
+
 body.light-theme .navbar-nav .nav-link:hover {
   color: #193BAC;
 }
@@ -50,40 +60,48 @@ body.light-theme .navbar-nav .nav-link:hover {
 
 /* TEMA OSCURO */
 body.dark-theme {
-  background-color: #111010;
+  background-color: #1a1818;
   color: #E0E0E0;
 }
+
 body.dark-theme #nombre {
   color: #E0E0E0;
 }
-body.dark-theme .navbar-nav .nav-link{
+
+body.dark-theme .navbar-nav .nav-link {
   color: #E0E0E0;
 }
+
 body.dark-theme .navbar-toggler {
   background-color: #1F2426;
   color: #E0E0E0;
 }
+
 body.dark-theme .navbar-toggler-icon {
   background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23E0E0E0" height="30" width="30" viewBox="0 0 30 30"%3E%3Cpath d="M0 4h30v4H0zm0 11h30v4H0zm0 11h30v4H0z"/%3E%3C/svg%3E');
 }
-body.dark-theme #sobreMi{
+
+body.dark-theme #sobreMi {
   color: #E0E0E0;
 }
-body.dark-theme .timeline{
+
+body.dark-theme .timeline {
   border-left: 2px solid white;
 }
 
 /*TITULOS*/
-.titulo{
+.titulo {
   color: #193BAC;
   font-size: 3rem;
 }
-.tituloFormacion{
+
+.tituloFormacion {
   font-size: 1.8rem;
   color: #193BAC;
 }
+
 /*NAVBAR*/
-.fixed{
+.fixed {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   position: fixed;
@@ -95,14 +113,17 @@ body.dark-theme .timeline{
   justify-content: center;
   align-items: center;
 }
-.fix{
+
+.fix {
   overflow: hidden;
 }
-.navbar-nav{
+
+.navbar-nav {
   display: flex;
   flex-wrap: wrap;
 }
-.navbar-custom{
+
+.navbar-custom {
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -111,16 +132,20 @@ body.dark-theme .timeline{
   backdrop-filter: blur(12px);
   padding-bottom: 15px;
 }
-.nav-item.nav-link{
+
+.nav-item.nav-link {
   font-size: 1.3rem;
 }
+
 .navbar-nav .nav-link:hover {
   color: #193BAC;
 }
+
 .navbar-toggler {
   border: none;
   transition: background-color 0.3s, color 0.3s;
 }
+
 .switch {
   font-size: 17px;
   position: relative;
@@ -128,11 +153,13 @@ body.dark-theme .timeline{
   width: 3.5em;
   height: 2em;
 }
+
 .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
+
 .slider {
   position: absolute;
   cursor: pointer;
@@ -141,6 +168,7 @@ body.dark-theme .timeline{
   border-radius: 50px;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
+
 .slider:before {
   position: absolute;
   content: "";
@@ -152,12 +180,13 @@ body.dark-theme .timeline{
   border-radius: inherit;
   transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
 }
-.switch input:checked + .slider {
+
+.switch input:checked+.slider {
   box-shadow: 0 0 20px #193BAC;
   border: 2px solid #0974f1;
 }
 
-.switch input:checked + .slider:before {
+.switch input:checked+.slider:before {
   transform: translateX(1.5em);
 }
 
@@ -167,11 +196,14 @@ body.dark-theme .timeline{
   display: flex;
   align-items: center;
 }
+
 #nombre {
   font-size: 5rem;
   transition: color 0.3s;
 }
-.left, .right {
+
+.left,
+.right {
   flex: 1;
   text-align: center;
 }
@@ -186,6 +218,7 @@ body.dark-theme .timeline{
   width: 300px;
   height: auto;
 }
+
 /*Boton CV*/
 .btncv {
   color: #193BAC;
@@ -204,9 +237,11 @@ body.dark-theme .timeline{
   border-radius: 20px;
   transition: background-color 0.3s;
 }
+
 .btncv:hover {
   color: white;
 }
+
 .btncv::before {
   content: "";
   position: absolute;
@@ -219,6 +254,7 @@ body.dark-theme .timeline{
   z-index: -1;
   transition: all 1s;
 }
+
 .btncv:hover::before {
   width: 160%;
 }
@@ -229,16 +265,19 @@ body.dark-theme .timeline{
 }
 
 @keyframes pulse {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.05);
   }
 }
 
 /*SECCION SOBRE MI */
-#SobreMi{
+#SobreMi {
   width: 100%;
   padding: 1rem;
   text-align: center;
@@ -246,11 +285,12 @@ body.dark-theme .timeline{
 }
 
 /*SECCION PROYECTOS */
-#proyectos{
+#proyectos {
   width: 100%;
   padding: 1rem;
   text-align: center;
 }
+
 .card {
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -279,32 +319,36 @@ body.dark-theme .timeline{
   margin: 0;
   text-align: center;
 }
+
 .skill-icon {
   margin: 10px;
   width: 200px;
   height: 200px;
-  border-radius: 50%; 
+  border-radius: 50%;
   overflow: hidden;
-  display: flex; 
+  display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 0.3s, box-shadow 0.3s; 
+  transition: transform 0.3s, box-shadow 0.3s;
 }
+
 .skill-icon img {
-  width: 70%; 
-  height: auto; 
-  max-height: 70%; 
+  width: 70%;
+  height: auto;
+  max-height: 70%;
 }
+
 .skill-icon:hover {
   transform: scale(1.1);
   box-shadow: 0 4px 20px rgba(0, 123, 255, 0.5);
 }
 
 /*SECCION FORMACION*/
-#formacion{
+#formacion {
   width: 100%;
   padding: 1rem;
 }
+
 .timeline {
   position: relative;
   padding-left: 40px;
@@ -346,22 +390,25 @@ body.dark-theme .timeline{
 }
 
 @media (max-width: 768px) {
-  #SobreMi, #proyectos, #habilidades, #formacion, #perfil{
-    height: auto; 
+
+  #SobreMi,
+  #proyectos,
+  #habilidades,
+  #formacion,
+  #perfil {
+    height: auto;
     padding: 1rem;
   }
-  .titulo{
+
+  .titulo {
     font-size: 2rem;
   }
-  #nombre{
-    font-size: 2.8rem;
+
+  #nombre {
+    font-size: 2.9rem;
   }
-  .banner{
+
+  .banner {
     height: 52px;
   }
 }
-
-
-
-
-
