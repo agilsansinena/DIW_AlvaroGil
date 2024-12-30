@@ -10,6 +10,7 @@ let hintsAvailable = 3;
 let totalParejas;
 let score = 0;
 const aciertoAudio = new Audio('../sound/acierto.mp3');
+aciertoAudio.volume = 0.3; // Set volume to 30%
 const errorAudio = new Audio('../sound/Error.mp3');
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -82,7 +83,6 @@ function iniciarJuego() {
                         document.getElementById('aciertos').textContent = aciertos;
                         document.getElementById('score').textContent = score;
                         aciertoAudio.play();
-                        aciertoAudio.volume = 0.3;
                         if (aciertos === totalParejas) {
                             aciertoAudio.play();
                             stopTimer();

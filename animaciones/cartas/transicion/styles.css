@@ -1,4 +1,4 @@
-body{
+body {
     margin: 0;
     font-family: Arial, sans-serif;
     display: flex;
@@ -7,7 +7,7 @@ body{
     justify-content: center;
     height: 100vh;
     background-color: darkorange;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 .todasCartas {
@@ -19,7 +19,8 @@ body{
     margin: 0;
 }
 
-.arriba, .abajo {
+.arriba,
+.abajo {
     display: flex;
     justify-content: center;
     margin: 0;
@@ -34,20 +35,22 @@ body{
     perspective: 1000px;
 }
 
-.carta .anverso{
+.carta .anverso {
     z-index: 0;
     transform: rotateY(180deg);
 }
-.carta .reverso{
+
+.carta .reverso {
     z-index: 10;
     transform: rotateY(0deg);
 }
 
-.carta.seleccionada .anverso{
+.carta.seleccionada .anverso {
     z-index: 10;
     transform: rotateY(0deg);
 }
-.carta.seleccionada .reverso{
+
+.carta.seleccionada .reverso {
     z-index: 0;
     transform: rotateY(180deg);
 }
@@ -57,14 +60,28 @@ body{
 }
 
 @keyframes vibrate {
-    0% { transform: translateX(0); }
-    25% { transform: translateX(-5px); }
-    50% { transform: translateX(5px); }
-    75% { transform: translateX(-5px); }
-    100% { transform: translateX(0); }
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+
+    75% {
+        transform: translateX(-5px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
-.carta div{
+.carta div {
     width: 150px;
     height: 190px;
     background-size: cover;
@@ -73,32 +90,39 @@ body{
     backface-visibility: hidden;
 }
 
-.reverso{
+.reverso {
     background-image: url('../img/pokemonatras.webp');
 }
 
-.pikachu .anverso{
+.pikachu .anverso {
     background-image: url('../img/pikachu.webp');
 }
-.charizard .anverso{
+
+.charizard .anverso {
     background-image: url('../img/charizard.webp');
 }
-.charizard2 .anverso{
+
+.charizard2 .anverso {
     background-image: url('../img/charizard2.webp');
 }
-.articuno .anverso{
+
+.articuno .anverso {
     background-image: url('../img/Articuno.webp');
 }
-.blastoise .anverso{
+
+.blastoise .anverso {
     background-image: url('../img/blastoise.webp');
 }
-.gyarados .anverso{
+
+.gyarados .anverso {
     background-image: url('../img/gyarados.webp');
 }
-.moltres .anverso{
+
+.moltres .anverso {
     background-image: url('../img/moltres.webp');
 }
-.zapdos .anverso{
+
+.zapdos .anverso {
     background-image: url('../img/zapdos.webp');
 }
 
@@ -109,6 +133,7 @@ body{
 
 .configuracion {
     margin-bottom: 20px;
+    margin-top: 20px;
     text-align: center;
 }
 
@@ -131,4 +156,14 @@ button:hover {
     transform: scale(1.1);
 }
 
+.todo {
+    height: 100vh;
+    width: auto;
+}
 
+.botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
