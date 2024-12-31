@@ -51,6 +51,9 @@ body.light-theme .navbar-nav .nav-link:hover {
 body.light-theme footer a{
   color: #000;
 }
+body.light-theme #scrollToTop {
+  color: #1F2426;
+}
 
 
 /* TEMA OSCURO */
@@ -86,6 +89,9 @@ body.dark-theme .timeline {
 
 body.dark-theme footer a {
   color: #fff;
+}
+body.dark-theme #scrollToTop {
+  color: #E0E0E0;
 }
 
 /*TITULOS*/
@@ -362,7 +368,6 @@ body.dark-theme footer a {
   right: 20px;
   z-index: 1000;
   background-color: transparent;
-  color: white;
   border: none;
   border-radius: 50%;
   width: 50px;
