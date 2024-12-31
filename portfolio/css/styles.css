@@ -1,5 +1,6 @@
 @import url(../css/clash-display.css);
 
+
 /*BODY*/
 body {
   font-family: 'ClashDisplay', sans-serif;
@@ -47,7 +48,9 @@ body.light-theme .navbar-toggler-icon {
 body.light-theme .navbar-nav .nav-link:hover {
   color: #193BAC;
 }
-
+body.light-theme footer a{
+  color: #000;
+}
 
 
 /* TEMA OSCURO */
@@ -79,6 +82,10 @@ body.dark-theme #sobreMi {
 
 body.dark-theme .timeline {
   border-left: 2px solid white;
+}
+
+body.dark-theme footer a {
+  color: #fff;
 }
 
 /*TITULOS*/
@@ -251,24 +258,6 @@ body.dark-theme .timeline {
   width: 160%;
 }
 
-@media (max-width: 768px) {
-  #perfil {
-    flex-direction: column; /* Cambia la dirección a columna para apilar elementos */
-    text-align: center; /* Centra el texto */
-  }
-
-  .left, .right {
-    flex: none; /* Elimina el flex para que no se divida en dos columnas */
-    width: 100%; /* Ocupa el 100% del ancho */
-  }
-
-  .right img {
-    width: 100px; /* Reduce el tamaño de la imagen */
-    height: auto; /* Mantiene la proporción */
-    margin-top: 20px; /* Añade un margen superior para separar la imagen del texto */
-  }
-}
-
 /*SECCION SOBRE MI */
 #SobreMi {
   width: 100%;
@@ -307,6 +296,7 @@ body.dark-theme .timeline {
   width: 100%;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap ;
   align-items: center;
   padding: 2rem;
   margin: 0;
@@ -366,12 +356,12 @@ body.dark-theme .timeline {
 }
 
 
-
 #scrollToTop {
   position: fixed;
   bottom: 20px;
   right: 20px;
   z-index: 1000;
+  background-color: transparent;
   color: white;
   border: none;
   border-radius: 50%;
@@ -398,10 +388,31 @@ body.dark-theme .timeline {
   }
 
   #nombre {
-    font-size: 2.9rem;
+    font-size: 3.6rem;
   }
 
   .banner {
     height: 52px;
+  }
+  .skill-icon {
+    width: 150px;
+    height: 150px;
+  }
+  #perfil {
+    flex-direction: column;
+    text-align: center;
+  }
+  .right img {
+    width: 100px;
+    height: auto;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 767px) {
+  #scrollToTop {
+    right: 10px;
+    bottom: 10px;
+    width: 35px;
+    height: 35px;
   }
 }

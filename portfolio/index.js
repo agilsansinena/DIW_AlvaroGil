@@ -47,17 +47,15 @@ document.addEventListener("DOMContentLoaded", () => {
   typeEffect();
 });
 
+
+// Cambiar el tema
 const toggle = document.getElementById('theme-toggle');
 const body = document.body;
-
-// Verificar el tema guardado en localStorage
 const currentTheme = localStorage.getItem('theme');
 if (currentTheme) {
   body.classList.add(currentTheme);
   toggle.checked = currentTheme === 'dark-theme';
 }
-
-// Cambiar el tema al hacer clic en el interruptor
 toggle.addEventListener('change', () => {
   if (toggle.checked) {
     body.classList.replace('light-theme', 'dark-theme');
@@ -68,17 +66,29 @@ toggle.addEventListener('change', () => {
   }
 });
 
+//Scroll hacia arriba
 $(document).ready(function() {
+  const fadeDuration = 500;
+  const scrollDuration = 1200; 
+  const scrollOffset = 100;
+
   $(window).scroll(function() {
-    if ($(this).scrollTop() > 100) {
-      $('#scrollToTop').fadeIn();
+    if ($(this).scrollTop() > scrollOffset) {
+      $('#scrollToTop').fadeIn(fadeDuration);
     } else {
-      $('#scrollToTop').fadeOut();
+      $('#scrollToTop').fadeOut(fadeDuration);
     }
   });
+
   $('#scrollToTop').click(function(e) {
     e.preventDefault();
-    $('html, body').animate({ scrollTop: 0 }, 1000);
+    $('html, body').stop(true, true).animate(
+      { scrollTop: 0 }, 
+      {
+        duration: scrollDuration,
+        easing: 'linear'
+      }
+    );
   });
 });
 
