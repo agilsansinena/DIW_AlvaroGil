@@ -1,9 +1,5 @@
 @import url(../css/clash-display.css);
 
-html {
-  margin: 0;
-}
-
 /*BODY*/
 body {
   font-family: 'ClashDisplay', sans-serif;
@@ -17,17 +13,13 @@ body {
   padding-top: 60px;
   transition: background-color 0.3s, color 0.3s;
   overflow-x: hidden;
-  scroll-behavior: smooth;
 }
 
 section {
   scroll-margin-top: 70px;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
+
 
 /*TEMA CLARO*/
 body.light-theme {
@@ -259,20 +251,21 @@ body.dark-theme .timeline {
   width: 160%;
 }
 
-.rounded-circle {
-  border-image-slice: 1;
-  animation: pulse 3s infinite;
-}
-
-@keyframes pulse {
-
-  0%,
-  100% {
-    transform: scale(1);
+@media (max-width: 768px) {
+  #perfil {
+    flex-direction: column; /* Cambia la dirección a columna para apilar elementos */
+    text-align: center; /* Centra el texto */
   }
 
-  50% {
-    transform: scale(1.05);
+  .left, .right {
+    flex: none; /* Elimina el flex para que no se divida en dos columnas */
+    width: 100%; /* Ocupa el 100% del ancho */
+  }
+
+  .right img {
+    width: 100px; /* Reduce el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción */
+    margin-top: 20px; /* Añade un margen superior para separar la imagen del texto */
   }
 }
 
@@ -315,7 +308,7 @@ body.dark-theme .timeline {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem 0;
+  padding: 2rem;
   margin: 0;
   text-align: center;
 }

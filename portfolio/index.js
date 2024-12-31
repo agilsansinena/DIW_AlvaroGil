@@ -61,10 +61,10 @@ if (currentTheme) {
 toggle.addEventListener('change', () => {
   if (toggle.checked) {
     body.classList.replace('light-theme', 'dark-theme');
-    localStorage.setItem('theme', 'dark-theme'); // Guardar el tema en localStorage
+    localStorage.setItem('theme', 'dark-theme');
   } else {
     body.classList.replace('dark-theme', 'light-theme');
-    localStorage.setItem('theme', 'light-theme'); // Guardar el tema en localStorage
+    localStorage.setItem('theme', 'light-theme');
   }
 });
 
